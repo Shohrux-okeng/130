@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Xatoliklar</title>
+</head>
+<body>
+  <button onclick="syntaxError()">SyntaxError</button><br><br>
+  <button onclick="referenceError()">ReferenceError</button><br><br>
+  <button onclick="typeError()">TypeError</button><br><br>
+  <button onclick="rangeError()">RangeError</button><br><br>
+  <button onclick="uriError()">URIError</button><br><br>
+
+  <script>
+    function syntaxError() {
+      // Bu yerda noto‘g‘ri sintaksis bo‘lib  sahifa ishlashdan to‘xtaydi
+      eval("if true alert('salom')");
+    }
+
+    function referenceError() {
+      // E'lon qilinmagan o‘zgaruvchi
+      console.log(noma_lum_ozgaruvchi);
+    }
+
+    function typeError() {
+      // noto‘g‘ri turdagi amal
+      let son = 10;
+      son(); // son bu funksiya emas
+    }
+
+    function rangeError() {
+      // manfiy uzunlikdagi massiv
+      let arr = new Array(-100);
+    }
+
+    function uriError() {
+      // noto‘g‘ri URI format
+      decodeURI("%");
+    }
+  </script>
+</body>
+</html>
